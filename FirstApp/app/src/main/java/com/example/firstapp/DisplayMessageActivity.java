@@ -13,6 +13,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_message);
 
         //获取此活动的Intent，并获取外部的字符串
+        // 可能是隐式Intent,指明启动或触发的组件应该满足的条件
         Intent intent = getIntent();
         String message = intent.getStringExtra(HelloWorld.EXTRA_MESSAGE);
 

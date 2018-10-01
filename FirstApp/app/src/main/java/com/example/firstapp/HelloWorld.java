@@ -17,7 +17,7 @@ public class HelloWorld extends AppCompatActivity {
     //点击Send按钮的回调函数
     public void sendMessage(View view)
     {
-        // 创建Intent对象，并调用另一个窗口
+        // 创建Intent对象，并调用另一个窗口，显式Intent，明确指明了需要启动和触发的组件类名
         Intent intent = new Intent(this,DisplayMessageActivity.class);
         EditText editText = (EditText)findViewById(R.id.editText2);
         String message = editText.getText().toString();

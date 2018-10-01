@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <!--上面定义了Android应用的标签图标，主题等-->
-        
+
         <!--定义Android应用的一个组件：Activity的标签-->
         <activity android:name=".HelloWorld">
             <intent-filter>
