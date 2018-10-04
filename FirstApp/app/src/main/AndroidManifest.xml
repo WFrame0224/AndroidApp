@@ -20,6 +20,7 @@
                 <!-- 指定加载该应用时运行该activity -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <!-- 上述两个元素必须配合使用，Activity才会显示在应用启动器中 -->
         </activity>
         <!--此目的是添加向上导航-->
         <activity android:name=".DisplayMessageActivity"
