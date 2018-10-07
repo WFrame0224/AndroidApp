@@ -12,10 +12,7 @@ public class DrawView extends View {
     public float currentX = 40;
     public float currentY = 50;
     // 定义并创建绘笔
-    Paint p1 = new Paint();
-    Paint p2 = new Paint();
-    Paint p3 = new Paint();
-    Paint p4 = new Paint();
+    Paint[] ps = new Paint[4];
     public DrawView(Context context){
         super(context);
     }
@@ -26,15 +23,18 @@ public class DrawView extends View {
     public void onDraw(Canvas canvas){
         super.onDraw(canvas);
         // 设置画笔颜色
-        p1.setColor(Color.GREEN);
-        p2.setColor(Color.RED);
-        p3.setColor(Color.BLUE);
-        p4.setColor(Color.YELLOW);
+        for(int i = 0;i<=3;i++) {
+            ps[i] = new Paint();
+        }
+        ps[0].setColor(Color.GREEN);
+        ps[1].setColor(Color.RED);
+        ps[2].setColor(Color.BLUE);
+        ps[3].setColor(Color.YELLOW);
         // 绘制一个小球
-        canvas.drawCircle(currentX-50,currentY-50,15,p1);
-        canvas.drawCircle(currentX+50,currentY-50,15,p2);
-        canvas.drawCircle(currentX+50,currentY+50,15,p3);
-        canvas.drawCircle(currentX-50,currentY+50,15,p4);
+        canvas.drawCircle(currentX-50,currentY-50,15,ps[0]);
+        canvas.drawCircle(currentX+50,currentY-50,15,ps[1]);
+        canvas.drawCircle(currentX+50,currentY+50,15,ps[2]);
+        canvas.drawCircle(currentX-50,currentY+50,15,ps[3]);
     }
     //为该组件的触碰事件重写事件处理的方法
     @Override
