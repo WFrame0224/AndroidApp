@@ -6,8 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/root">
+
     <com.example.thirdapp.DrawView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
