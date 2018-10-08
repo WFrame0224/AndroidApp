@@ -65,6 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:onClick="OpenThirdFloor"
-            android:text="打开页面3" />
+            android:text="打开页面3--计算机"
+            android:textColor="@color/color4"/>
     </LinearLayout>
 </FrameLayout>

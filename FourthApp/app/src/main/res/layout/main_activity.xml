@@ -121,7 +121,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="openFrameLayout"
-                android:text="打开framelayoutactivity页面" />
+                android:text="打开帧布局页面"
+                android:textColor="@color/color1"/>
         </TableRow>
     </TableLayout>
 </LinearLayout>
