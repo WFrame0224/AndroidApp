@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1"
+    tools:context=".EditTextTest">
+
+    <TableRow
+        android:layout_marginLeft="8pt"
+        android:layout_marginTop="8pt">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="用户名"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8pt"
+            android:hint="Please input your account"
+            android:selectAllOnFocus="true" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginLeft="8pt"
+        android:layout_marginTop="8pt">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="密  码"
+            android:textSize="16sp" />
+        <!-- android:inputType="numberPassword"表明只能接受数字密码 -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8pt"
+            android:inputType="numberPassword" />
+
+        <EditText />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="8pt"
+        android:layout_marginLeft="8pt">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="年  龄"
+            android:textSize="16sp" />
+        <!-- android:inputType="number"表明是数值输入框 -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8pt"
+            android:inputType="number" />
+        <EditText />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="8pt"
+        android:layout_marginLeft="8pt">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="生  日"
+            android:textSize="16sp" />
+        <!-- android:inputType="date"表明是日期输入框 -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8pt"
+            android:inputType="date" />
+        <EditText />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="8pt"
+        android:layout_marginLeft="8pt">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="电话号码"
+            android:textSize="16sp" />
+        <!-- android:inputType="date"表明是日期输入框 -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8pt"
+            android:hint="Please input phonenumber"
+            android:selectAllOnFocus="true"
+            android:inputType="phone" />
+        <EditText />
+    </TableRow>
+    <Button
+        android:layout_marginTop="8pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注  册"/>
+</TableLayout>

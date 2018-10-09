@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".EditTextTest"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+        <activity android:name=".ButtonViewTest"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
     </application>
 
 </manifest>
