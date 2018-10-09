@@ -94,6 +94,10 @@
                     android:text="绿色"/>
             </LinearLayout>
         </TableRow>
+        <TextView
+            android:id="@+id/show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableLayout>
 
 
