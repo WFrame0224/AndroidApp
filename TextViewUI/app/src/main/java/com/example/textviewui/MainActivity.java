@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void OpenClockView(View view){
-        Intent intent = new Intent(this,ButtonViewTest.class);
+        Intent intent = new Intent(this,ClockView.class);
         startActivity(intent);
     }
     public void OpenDynamicView(View view){

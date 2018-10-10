@@ -28,6 +28,10 @@
             android:parentActivityName=".MainActivity">
 
         </activity>
+        <activity android:name=".ClockView"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
     </application>
 
 </manifest>

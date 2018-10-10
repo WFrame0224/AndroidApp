@@ -143,6 +143,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:onClick="OpenClockView"
                 android:text="时钟布局演示"
                 android:textColor="#3f0000" />
 
