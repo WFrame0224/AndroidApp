@@ -21,4 +21,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,ButtonViewTest.class);
         startActivity(intent);
     }
+    public void OpenClockView(View view){
+        Intent intent = new Intent(this,ButtonViewTest.class);
+        startActivity(intent);
+    }
+    public void OpenDynamicView(View view){
+        Intent intent = new Intent(this,DynamicView.class);
+        startActivity(intent);
+    }
 }
