@@ -12,30 +12,37 @@ import android.widget.Toast;
 
 public class ButtonViewTest extends AppCompatActivity {
     CheckBox[] love_colors = new CheckBox[3];
-    public static byte CheckBoxIndex = 0b00000000;
+    public static byte CheckBoxIndex = (byte)0b01111110;
     static String love_color = "";
-    public void getChechBox(byte dex){
-        CheckBoxIndex = (byte)(CheckBoxIndex & dex);
-        switch (CheckBoxIndex){
-            case 1:
+    public void getChechBox(byte dex,char type){
+        if (type == '+')
+        {
+            CheckBoxIndex = (byte)(CheckBoxIndex & dex);
+        }
+        else if (type == '-')
+        {
+            CheckBoxIndex = (byte)(CheckBoxIndex | dex);
+        }
+        switch ((CheckBoxIndex & 07)){
+            case 6:
                 love_color = "红色";
                 break;
-            case 2:
+            case 5:
                 love_color = "蓝色";
                 break;
-            case 3:
+            case 4:
                 love_color = "红色、蓝色";
                 break;
-            case 4:
+            case 3:
                 love_color = "绿色";
                 break;
-            case 5:
+            case 2:
                 love_color = "红色、绿色";
                 break;
-            case 6:
+            case 1:
                 love_color = "蓝色、绿色";
                 break;
-            case 7:
+            case 0:
                 love_color = "红色、绿色、蓝色";
                 break;
             default:
@@ -71,9 +78,9 @@ public class ButtonViewTest extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    getChechBox((byte)0x01);
+                    getChechBox((byte)0x7e,'+');
                 } else {
-                    getChechBox((byte)0x7e);
+                    getChechBox((byte)0x01,'-');
                 }
             }
         });
@@ -81,9 +88,9 @@ public class ButtonViewTest extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    getChechBox((byte)0x02);
+                    getChechBox((byte)0x7d,'+');
                 } else {
-                    getChechBox((byte)0x7d);
+                    getChechBox((byte)0x02,'-');
                 }
             }
         });
@@ -91,9 +98,9 @@ public class ButtonViewTest extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    getChechBox((byte)0x04);
+                    getChechBox((byte)0x7b,'+');
                 } else {
-                    getChechBox((byte)0x7b);
+                    getChechBox((byte)0x04,'-');
                 }
             }
         });
