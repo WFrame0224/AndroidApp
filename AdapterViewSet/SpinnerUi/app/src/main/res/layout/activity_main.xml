@@ -12,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/books"
-        android:prompt="@string/tip"></Spinner>
+        android:prompt="@string/tip">
+
+    </Spinner>
     <!-- 并未指定entries，需要程序中利用Adapter为其提供列表项 -->
     <Spinner
         android:id="@+id/spinner2"
