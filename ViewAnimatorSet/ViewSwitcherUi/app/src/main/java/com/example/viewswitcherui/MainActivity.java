@@ -137,7 +137,6 @@ public class MainActivity extends AppCompatActivity {
             switcher.setOutAnimation(this, R.anim.slide_out_left);
             // 控制下一屏将要显示的GridView对应的Adapter
             ((GridView) switcher.getNextView()).setAdapter(adapter);
-            // 单击右边按钮，显示下一屏
             // 学习手势检测后，也可通过手势检测实现显示下一屏
             switcher.showNext();
         }
@@ -155,9 +154,6 @@ public class MainActivity extends AppCompatActivity {
             // 单击右边按钮，显示下一屏
             // 学习手势检测后，也可通过手势检测实现显示下一屏
             switcher.showNext();
-        } else if (screenNo == screenCount)
-        {
-            screenNo = 1;
         }
     }
 }
