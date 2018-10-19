@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     // 定义一个常量，用于显示每屏显示的应用程序数
-    public static final int NUMBER_PER_SCREEN = 12;
+    public static final int NUMBER_PER_SCREEN = 10;
 
     // 代表应用程序的内部类
     public static class DataItem {
@@ -36,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
     ViewSwitcher switcher;
     // 创建LayoutInflater对象
+    // LayoutInflater的作用类似于findViewById()
+    /** LayoutInflater 和 findViewById()的异同
+     *      LayoutInflater：用来寻找res/layout/下的xml布局文件，并且实例化
+     *      findViewById()是找Xml布局下的具体的widget控件（如Button，TextView等）
+     *   具体作用：
+     *          1，对于一个没有被载入或者想要动态载入的界面，都需要使用LayoutInflater.inflate()来载入
+     *          2，对于一个已经载入的界面，就可以采用Activity.findViewById()方法来获得其中的界面元素
+     */
     LayoutInflater inflater;
 
 
@@ -109,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public View makeView() {
                 // 加载R.layout.slidelistview组件，实际上就是一个GridView组件
+                // 利用inflater.inflate()方法进行动态载入R.layout.slidelistview组件
                 return inflater.inflate(R.layout.slidelistview, null);
             }
         });
