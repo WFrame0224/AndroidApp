@@ -1,5 +1,6 @@
 package com.example.viewswitcheruidemo;
 
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,34 +9,22 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    // 获取布局填充器
-    LayoutInflater inflater;
-    ConstraintLayout parent;
-    View child1,child2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        parent = (ConstraintLayout)findViewById(R.id.main_activity);
-        inflater = LayoutInflater.from(MainActivity.this);
-
     }
 
     public void pre(View view) {
-        child1 = inflater.inflate(R.layout.image_switcher_activity,
-                parent, false );
-        if (child2 != null) {
-            parent.removeView(child2);
-        }
-        parent.addView(child1);
+        // 创建Intent对象，并调用另一个窗口，显示Intent,明确指明了需要启动和触发的组件名称
+        Intent intent = new Intent(this,ImageSwitcherActivity.class);
+        startActivity(intent);
     }
 
     public void next(View view) {
-        child2 = inflater.inflate(R.layout.text_switcher_activity,
-                parent, false );
-        if (child1 != null) {
-            parent.removeView(child1);
-        }
-        parent.addView(child2);
+        // 创建Intent对象，并调用另一个窗口，显示Intent,明确指明了需要启动和触发的组件名称
+        Intent intent = new Intent(this,TextSwitcherActivity.class);
+        startActivity(intent);
     }
 }

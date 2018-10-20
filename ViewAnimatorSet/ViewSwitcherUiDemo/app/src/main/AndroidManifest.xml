@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ImageSwitcherActivity"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+        <activity android:name=".TextSwitcherActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
     </application>
 
 </manifest>
