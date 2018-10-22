@@ -1,11 +1,13 @@
 package com.example.toastui;
 
 import android.graphics.Color;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Button simple = (Button)findViewById(R.id.simple);
         // 为按钮的单击事件绑定事件监听器
         simple.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Button simple_bn = (Button)findViewById(R.id.simple_bn);
         // 为按钮的单击事件绑定事件单击器
         simple_bn.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 // 创建一个Toas提示信息,利用构造器
@@ -58,6 +62,18 @@ public class MainActivity extends AppCompatActivity {
                 // 设置Toast的显示时间
                 toast.setDuration(Toast.LENGTH_SHORT);
                 toast.show();
+            }
+        });
+
+        CalendarView cv = (CalendarView)findViewById(R.id.canlendarview01);
+        // 为为CalendarView组件的日期改变事件添加事件监听器
+        cv.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView calendarView, 
+                                            int year, int month, int dayOfMonth) {
+                // 使用Toast显示用户选择的日期
+                Toast.makeText(MainActivity.this, "你生日是" + year + "年" + month + "月"
+                        + dayOfMonth + "日", Toast.LENGTH_SHORT).show();
             }
         });
     }
