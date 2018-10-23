@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 // 设置通知的图标
                 .setSmallIcon(R.drawable.timg)
                 // 设置通知的自定义声音
-                .setSound(Uri.parse("file://H:/Working/AndroidApp/PickerUiSet/NotificationUi/app/src/main/res/raw" + R.raw.msg))
+                .setSound(Uri.parse("android.resource://com.example.notificationui/" + R.raw.msg))
                 // 设置通知内容的标题
                 .setContentTitle("中国工商银行")
                 // 设置通知内容
