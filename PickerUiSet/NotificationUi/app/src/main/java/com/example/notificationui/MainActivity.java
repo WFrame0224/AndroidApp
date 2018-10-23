@@ -22,7 +22,7 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     static final int NOTIFICATION_ID = 0x123;
-    static final String CHANNEL_ID = "example";
+    static final String CHANNEL_ID = "my_channel_id_02";
     NotificationManager nm;
 
     @Override
@@ -36,17 +36,6 @@ public class MainActivity extends AppCompatActivity {
         // 第二步创建通知
         NotificationChannel channel = new NotificationChannel(CHANNEL_ID,name,
                 NotificationManager.IMPORTANCE_HIGH);
-        // 设置通知Channel的描述信息
-        channel.setDescription("测试Channel的描述信息");
-        // 设置通知出现的闪光灯
-        channel.enableLights(true);
-        channel.setLightColor(Color.RED);
-        // 设置通知出现的震动
-        channel.enableVibration(true);
-        channel.setVibrationPattern(new long[]{0,50,100,150});
-        channel.setSound(Uri.parse("android.resource://com.example.notificationui/" + R.raw.msg),
-                null);
-        // 最后在notificationmanager上创建该通知Channel
         nm.createNotificationChannel(channel);
     }
     // 为发送通知的按钮的点击事件定义事件处理的方法
