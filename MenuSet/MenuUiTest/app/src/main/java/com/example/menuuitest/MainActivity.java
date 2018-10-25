@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     final int FONT_RED = 0x116;
     final int FONT_BLUE = 0x117;
     final int FONT_GREEN = 0x118;
-    
+
     private EditText edit;
 
     @Override
