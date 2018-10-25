@@ -24,9 +24,7 @@ public class MainActivity extends AppCompatActivity {
     final int FONT_RED = 0x116;
     final int FONT_BLUE = 0x117;
     final int FONT_GREEN = 0x118;
-
-    // 定义其他按钮时的标识
-    final int OTHER_ID = 0x119;
+    
     private EditText edit;
 
     @Override
@@ -45,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         other.setHeaderIcon(R.drawable.tools);
         other.setHeaderTitle("选择您要启动的程序");
         // 添加菜单项
-        MenuItem item = other.add(0,OTHER_ID,0,"查看Swift");
+        MenuItem item = other.add("查看Swift");
         // 为菜单项设置关联的Activity
         // 要想此处起作用，必须将OnonOptionsItemSelected方法屏蔽，即不能重写，这样才能成功
 //        item.setIntent(new Intent(this,OtherActivity.class));
@@ -103,9 +101,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case FONT_BLUE:
                 edit.setTextColor(Color.BLUE);
-                break;
-            case OTHER_ID:
-                mi.setIntent(new Intent(this,OtherActivity.class));
                 break;
         }
         return true;
