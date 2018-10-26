@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ActionViewUi</string>
+    <string name="searchview">SearchView</string>
+    <string name="clockview">ClockView</string>
+</resources>
