@@ -8,12 +8,15 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.PopupMenu;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView txt;
+    PopupMenu popupMenu = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,5 +110,31 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return true;
+    }
+
+    public void onPopupButtonClick(View button) {
+        // 创建PopupMenu对象
+        popupMenu = new PopupMenu(this, button);
+        // 将R.menu.context菜单资源项加载到PopupMenu菜单中
+        getMenuInflater().inflate(R.menu.popup_menu, popupMenu.getMenu());
+        // 为popup菜单的菜单项单击事件绑定监视器
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.exit:
+                        // 隐藏该对话框
+                        popupMenu.dismiss();
+                        break;
+                    default:
+                        // 使用Toast显示用户单击的菜单项
+                        Toast.makeText(MainActivity.this,
+                                "您单击了【" + menuItem.getTitle() + "】菜单项",
+                                Toast.LENGTH_SHORT).show();
+                }
+                return true;
+            }
+        });
+        popupMenu.show();
     }
 }
