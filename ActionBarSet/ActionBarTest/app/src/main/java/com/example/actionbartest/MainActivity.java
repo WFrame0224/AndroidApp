@@ -1,5 +1,6 @@
 package com.example.actionbartest;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
         txt = (TextView) findViewById(R.id.txt);
         // 为文本框注册上下文菜单
         registerForContextMenu(txt);
+        // 设置是否显示应用程序图标
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setLogo(R.drawable.tools);
+        actionBar.setDisplayUseLogoEnabled(true);
+        // 将应用程序图标设置为可点击的按钮
+        actionBar.setHomeButtonEnabled(true);
+        // 将应用程序图标设置为可点击的按钮，并在图标上添加向左的箭头
+        actionBar.setDisplayHomeAsUpEnabled(true);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -53,6 +62,14 @@ public class MainActivity extends AppCompatActivity {
         mi.setChecked(true);  // ①
         switch (mi.getItemId())
         {
+            case android.R.id.home:
+                // 创建启动FirstActivity的Intent
+                Intent intent = new Intent(this, FirstActivity.class);
+                // 添加额外的Flag，将Activity栈中处于FirstActivity之上的Activity弹出
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                // 启动intent对应的Activity
+                startActivity(intent);
+                break;
             case R.id.red:
                 mi.setChecked(true);
                 txt.setBackgroundColor(Color.RED);

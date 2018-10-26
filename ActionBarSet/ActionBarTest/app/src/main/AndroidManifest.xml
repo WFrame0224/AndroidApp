@@ -13,13 +13,21 @@
                 android:theme="@style/Theme.AppCompat.DayNight.NoActionBar
                 则标题栏将消失
         -->
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".FirstActivity"
+            android:label="第1个Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"></activity>
+        <activity
+            android:name=".SecondActivity"
+            android:label="第2个Activity"
+            android:parentActivityName=".FirstActivity"></activity>
     </application>
 
 </manifest>
