@@ -112,6 +112,13 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /**创建PopupMenu创建弹出式菜单的步骤
+     * 1.调用new PopupMenu(Context context,View anchor)创建下拉式菜单,anchor代表要激发菜单的组件
+     * 2.调用MenuInflater的Infalte()方法将菜单资源填充到popupmenu中
+     * 3.调用Popupmenu的show()方法显示弹出式菜单
+     *
+     * @param button
+     */
     public void onPopupButtonClick(View button) {
         // 创建PopupMenu对象
         popupMenu = new PopupMenu(this, button);
