@@ -28,14 +28,23 @@ Contents:
 ### 8. AdapterViewUi和AdapterViewSet
 * **AdapterViewUi** 主要演示了使用*ArrayAdapter*创建实现*ListView*
 * **AdapterViewSet** 
-  * **AdapterViewFlipperUi** 主要演示了
-  * **AutoCompleteTextViewUi**
-  * **BaseAdapterTest**
-  * **ExpanddbleListView**
-  * **GridViewUi**
-  * **SimpleAdapterTest**
-  * **SpinnerUi**
-  * **StackViewUi**
+  * **SimpleAdapterTest** 主要演示了使用*SimpleAdapter*创建实现*ListView*
+  * **BaseAdapterTest** 主要演示了使用*BaseAdapter*实现不存储列表项的*ListView*
+  * **AutoCompleteTextViewUi** 主要演示了自动完成文本框*AutoCompleteTextView*的基本演示，方便用户快速填写
+  * **GridViewUi** 主要演示了利用*GridView*实现的带预览的图片浏览器
+  * **ExpanddbleListView** 主要实现了*ExpanddbleListView*的基本演示
+  * **SpinnerUi** 主要演示了利用*Spinner*实现下拉列表
+  * **AdapterViewFlipperUi** 实现了利用*AdapterViewFlipper*实现的多个View的切换，实现自动播放的图片库
+  * **StackViewUi** 实现了利用*StackView*实现堆叠效果切换多个View
+### 9. ProgressBarSet
+* **ProgressBarUi** 实现了环形和栏形的进度条的展示
+* **SeekBarUi** 实现了拖动条*SeekBar*的基本演示，完成利用拖动条改变图片的透明度
+### 10. ViewAnimator
+* **ViewSwitcherUi**和**ViewSwitcherUiDemo** 实现动画效果的仿Android的Lancher的切换效果，以及实现的*ImageSwitcher*和*TextSwitcher*的图片和文本切换器
+* **ViewFlipper** 实现利用*ViewFlippe*r实现图片自动播放，具有一定的动画效果
+
+
+
 
 ****
 
