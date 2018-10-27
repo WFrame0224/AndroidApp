@@ -1,107 +1,171 @@
 package com.example.actionbarswipnavui;
 
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.FragmentTransaction;
+import java.util.Random;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TabWidget;
+import android.widget.TextView;
 
 
 public class MainActivity extends FragmentActivity
-        implements ActionBar.TabListener
 {
-    ViewPager viewPager;
-    ActionBar actionBar;
+    private static final String TAG = "AndroidDemos.SlideTabs3";
+
+    private ViewPager mViewPager;
+
+    private PagerAdapter mPagerAdapter;
+
+    private TabWidget mTabWidget;
+
+    private String[] addresses = { "first", "second", "third" };
+
+    private Button[] mBtnTabs = new Button[addresses.length];
+
     @Override
-    public void onCreate(Bundle savedInstanceState)
+    protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        // 获取ActionBar对象
-        actionBar = getActionBar();
-        // 获取ViewPager
-        viewPager = (ViewPager) findViewById(R.id.pager);
-        // 创建一个FragmentPagerAdapter对象，该对象负责为ViewPager提供多个Fragment
-        FragmentPagerAdapter pagerAdapter = new FragmentPagerAdapter(
-                getSupportFragmentManager())
+        setContentView(R.layout.fragment_viewpager1_layout1);
+
+        mTabWidget = (TabWidget) findViewById(R.id.tabWidget1);
+        mTabWidget.setStripEnabled(false);
+        mBtnTabs[0] = new Button(this);
+        mBtnTabs[0].setFocusable(true);
+        mBtnTabs[0].setText(addresses[0]);
+        mBtnTabs[0].setTextColor(getResources().getColorStateList(R.color.colorAccent));
+        mTabWidget.addView(mBtnTabs[0]);
+        /*
+         * Listener必须在mTabWidget.addView()之后再加入，用于覆盖默认的Listener，
+         * mTabWidget.addView()中默认的Listener没有NullPointer检测。
+         */
+        mBtnTabs[0].setOnClickListener(mTabClickListener);
+
+        mBtnTabs[1] = new Button(this);
+        mBtnTabs[1].setFocusable(true);
+        mBtnTabs[1].setText(addresses[1]);
+        mBtnTabs[1].setTextColor(getResources().getColorStateList(R.color.colorPrimary));
+        mTabWidget.addView(mBtnTabs[1]);
+        mBtnTabs[1].setOnClickListener(mTabClickListener);
+
+        mBtnTabs[2] = new Button(this);
+        mBtnTabs[2].setFocusable(true);
+        mBtnTabs[2].setText(addresses[2]);
+        mBtnTabs[2].setTextColor(getResources().getColorStateList(R.color.colorPrimaryDark));
+        mTabWidget.addView(mBtnTabs[2]);
+        mBtnTabs[2].setOnClickListener(mTabClickListener);
+
+        mViewPager = (ViewPager) findViewById(R.id.viewPager1);
+        mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
+        mViewPager.setAdapter(mPagerAdapter);
+        mViewPager.setOnPageChangeListener(mPageChangeListener);
+
+        mTabWidget.setCurrentTab(0);
+    }
+
+    private OnClickListener mTabClickListener = new OnClickListener() {
+
+        @Override
+        public void onClick(View v)
         {
-            // 获取第position位置的Fragment
-            @Override
-            public Fragment getItem(int position)
+            if (v == mBtnTabs[0])
             {
-                Fragment fragment = new DummyFragment();
-                Bundle args = new Bundle();
-                args.putInt(DummyFragment.ARG_SECTION_NUMBER, position + 1);
-                fragment.setArguments(args);
-                return fragment;
-            }
-            // 该方法的返回值i表明该Adapter总共包括多少个Fragment
-            @Override
-            public int getCount()
+                mViewPager.setCurrentItem(0);
+            } else if (v == mBtnTabs[1])
             {
-                return 3;
-            }
-            // 该方法的返回值决定每个Fragment的标题
-            @Override
-            public CharSequence getPageTitle(int position)
+                mViewPager.setCurrentItem(1);
+
+            } else if (v == mBtnTabs[2])
             {
-                switch (position)
-                {
-                    case 0:
-                        return "第一页";
-                    case 1:
-                        return "第二页";
-                    case 2:
-                        return "第三页";
-                }
-                return null;
+                mViewPager.setCurrentItem(2);
+
             }
-        };
-        // 设置ActionBar使用Tab导航方式
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        // 遍历pagerAdapter对象所包含的全部Fragment
-        // 每个Fragment对应创建一个Tab标签
-        for (int i = 0; i < pagerAdapter.getCount(); i++)
-        {
-            actionBar.addTab(actionBar.newTab()
-                    .setText(pagerAdapter.getPageTitle(i))
-                    .setTabListener(this));
         }
-        // 为ViewPager组件设置FragmentPagerAdapter
-        viewPager.setAdapter(pagerAdapter); // ①
-        // 为ViewPager组件绑定事件监听器
-        viewPager.setOnPageChangeListener(
-                new ViewPager.SimpleOnPageChangeListener()
-                {
-                    // 当ViewPager显示的Fragment发生改变时激发该方法
-                    @Override
-                    public void onPageSelected(int position)
-                    {
-                        actionBar.setSelectedNavigationItem(position);
-                    }
-                });
-    }
-    @Override
-    public void onTabUnselected(ActionBar.Tab tab,
-                                FragmentTransaction fragmentTransaction)
+    };
+
+    private OnPageChangeListener mPageChangeListener = new OnPageChangeListener() {
+
+        @Override
+        public void onPageSelected(int arg0)
+        {
+            mTabWidget.setCurrentTab(arg0);
+        }
+
+        @Override
+        public void onPageScrolled(int arg0, float arg1, int arg2)
+        {
+
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int arg0)
+        {
+
+        }
+    };
+
+    private class MyPagerAdapter extends FragmentStatePagerAdapter
     {
+
+        public MyPagerAdapter(FragmentManager fm)
+        {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position)
+        {
+            return MyFragment.create(addresses[position]);
+        }
+
+        @Override
+        public int getCount()
+        {
+            return addresses.length;
+        }
+
     }
-    // 当指定Tab被选中时激发该方法
-    @Override
-    public void onTabSelected(ActionBar.Tab tab,
-                              FragmentTransaction fragmentTransaction)
+
+    public static class MyFragment extends Fragment
     {
-        viewPager.setCurrentItem(tab.getPosition());  // ②
-    }
-    @Override
-    public void onTabReselected(ActionBar.Tab tab,
-                                FragmentTransaction fragmentTransaction)
-    {
+        public static MyFragment create(String address)
+        {
+            MyFragment f = new MyFragment();
+            Bundle b = new Bundle();
+            b.putString("address", address);
+            f.setArguments(b);
+            return f;
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState)
+        {
+            Random r = new Random(System.currentTimeMillis());
+
+            Bundle b = getArguments();
+
+            View v = inflater.inflate(R.layout.fragment_viewpager1_layout1, null);
+            v.setBackgroundColor(r.nextInt() >> 8 | 0xFF << 24);
+
+            TextView txvAddress = (TextView) v.findViewById(R.id.textView1);
+            txvAddress.setTextColor(r.nextInt() >> 8 | 0xFF << 24);
+            txvAddress.setBackgroundColor(r.nextInt() >> 8 | 0xFF << 24);
+
+            txvAddress.setText(b.getString("address", ""));
+            return v;
+        }
+
     }
 }
-
