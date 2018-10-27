@@ -5,6 +5,7 @@ These codes was written while **learnning Android app**.
 
 Contents:
 ---------------
+> **----------------Activity的学习----------------------**
 ### 1. FirstAPP 
 * 实现了HelloWorld的相关程序，编辑信息，并另一个页面打印出来
 ### 2. SecondApp 
@@ -42,9 +43,30 @@ Contents:
 ### 10. ViewAnimator
 * **ViewSwitcherUi**和**ViewSwitcherUiDemo** 实现动画效果的仿Android的Lancher的切换效果，以及实现的*ImageSwitcher*和*TextSwitcher*的图片和文本切换器
 * **ViewFlipper** 实现利用*ViewFlippe*r实现图片自动播放，具有一定的动画效果
+### 11. ToastUi
+* 实现了利用*Toast*实现带图片的消息框和文本提示框的演示
+### 12. PickerUiSet
+* **DateTimerPickerUi** 实现了利用*CalendarView*组件实现日历演示，利用*DatePicker*和*TimerPicker*实现用户选择日期和选择时间
+* **NumberPickerUi** 实现了利用*NumberPicker*实现价格范围选择的演示
+* **ScorllView** 实现了利用*ScrollView*和*HorizontalScrollView*的垂直滚动视图和水平滚动视图的演示
+* **NotificationUi** 实现了状态栏通知的Ui展示，给出了“加薪通知”的应用展示
+### 13. DialogBoxSet
+* **AlertDialogUi** 实现了利用*AlertDialog*实现以下几种对话框：
 
+    简单文本对话框 | 简单列表对话框 | 单选/多选列表对话框 | 自定义列表项 | 自定义View对话框
+    ------------- | ------------- | ----------------- | ----------- | --------------
 
-
-
+* **PopupWindow** 实现了使用*PopupWindow*创建的弹出式对话框，使用*DatePickerDialog*和*TimerPickerDialog*实现日期和时间的弹出式选择对话框
+* **ProgressDialogUi** 实现了利用*progressDialog*创建进度对话框，显示任务执行的进度
+### 14. MenuSet
+* **ContextMenuUi** 实现与菜单项关联的*Activity*的演示，能够通过菜单项打开另一个ActivityView窗口
+* **MenuUiTest** 实现了基本的菜单项以及子菜单的演示
+* **MenuResTestUi** 实现使用XML文件定义菜单项的演示
+### 15. ActionBarSet
+* **ActionBarTest** 实现了利用*AndroidManifest.xml*实现活动条的显示于隐藏
+* **ActionViewUi** 实现使用*ActionBar*完成显示选项菜单项
+* **TabNavTest** 展示利用*Android studio*官方示例的*ActionBar*实现**Tab**导航的演示
+* **ActionBarSwipNavUi** 实现*TabWidget* + *ViewPager*实现导航的演示
 ****
+> **---------------Event的学习-------------**
 
