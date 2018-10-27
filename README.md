@@ -1,10 +1,16 @@
-# AndroidApp
-These codes was written while learnning Android app
+AndroidApp
+====================
+These codes was written while **learnning Android app**.
 
-Contents£º
-    1£©FirstAPP ÊµÏÖÁËHelloWorldµÄÏà¹Ø³ÌĞò£¬±à¼­ĞÅÏ¢£¬²¢ÁíÒ»¸öÒ³Ãæ´òÓ¡³öÀ´£»
-    2£©SecondApp ÊµÏÖÁË¼¸¸ö»ù±¾³£ÓÃ²¼¾Ö×é¼şµÄÑİÊ¾
-    3£©ThirdApp ÍêÉÆÁËSecondApp£¬²¢Ôö¼ÓÁË¸úËæÊÖÖ¸Ğ¡ÇòµÄÓ¦ÓÃÕ¹Ê¾
-    4£©FourthAppÑİÊ¾ÁËGridLayout£¬TableLayoutµÄÑİÊ¾Àı×Ó£¬²¢Ôö¼ÓÁËPopupWindow´´½¨¶Ô»°·ç¸ñµÄ´°¿Ú
-
-
+Contents:
+-------------------
+### 1. FirstAPP 
+* å®ç°äº†HelloWorldçš„ç›¸å…³ç¨‹åºï¼Œç¼–è¾‘ä¿¡æ¯ï¼Œå¹¶å¦ä¸€ä¸ªé¡µé¢æ‰“å°å‡ºæ¥
+### 2. SecondApp 
+* å®ç°äº†å‡ ä¸ªåŸºæœ¬å¸¸ç”¨å¸ƒå±€ç»„ä»¶çš„æ¼”ç¤º
+### 3. ThirdApp 
+* å®Œå–„äº†SecondApp
+* å¢åŠ äº†è·Ÿéšæ‰‹æŒ‡å°çƒçš„åº”ç”¨å±•ç¤º
+### 4. FourthApp
+* æ¼”ç¤ºäº†GridLayoutï¼ŒTableLayoutçš„æ¼”ç¤ºä¾‹å­
+* å¢åŠ äº†PopupWindowåˆ›å»ºå¯¹è¯é£æ ¼çš„çª—å£
