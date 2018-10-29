@@ -71,4 +71,5 @@ Contents:
 > **---------------3、Event的学习-------------**
 ### 16. EventSet
 * **EventListener_plane** 介绍了基本的事件监听器处理机制，采用事件监听器机制实现触摸屏控制飞机移动
+* **EventListener_diffType** 介绍了实现事件监听器的几种形式，介绍了外部类作为事件监听器，Activity本身作为事件监听器类
 
