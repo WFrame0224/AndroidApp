@@ -5,7 +5,7 @@ These codes was written while **learnning Android app**.
 
 Contents:
 ---------------
-> **----------------Activity的学习----------------------**
+> **----------------2、Activity的学习----------------------**
 ### 1. FirstAPP 
 * 实现了HelloWorld的相关程序，编辑信息，并另一个页面打印出来
 ### 2. SecondApp 
@@ -68,5 +68,7 @@ Contents:
 * **TabNavTest** 展示利用*Android studio*官方示例的*ActionBar*实现**Tab**导航的演示
 * **ActionBarSwipNavUi** 实现*TabWidget* + *ViewPager*实现导航的演示
 ****
-> **---------------Event的学习-------------**
+> **---------------3、Event的学习-------------**
+### 16. EventSet
+* **EventListener_plane** 介绍了基本的事件监听器处理机制，采用事件监听器机制实现触摸屏控制飞机移动
 
