@@ -73,3 +73,4 @@ Contents:
 * **EventListener_plane** 介绍了基本的事件监听器处理机制，采用事件监听器机制实现触摸屏控制飞机移动
 * **EventListener_diffType** 介绍了实现事件监听器的几种形式，介绍了外部类作为事件监听器，Activity本身作为事件监听器类
 * **EventCallback** 介绍了基于回调的事件传播机制，并给出了演示
+* **Configurationtest** 介绍了响应系统设置的事件，*Configuration*类，给出了利用其读取系统配置信息的演示，同时重写了onConfigurationChanged方法的响应函数监听按键控制的屏幕方向更改的事件
