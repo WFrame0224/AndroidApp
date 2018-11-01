@@ -45,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
                                 {
                                     continue outer;
                                 }
-                                nums.add(i);
                             }
-                            // 使用Toast显示统计出来的所有质数
-                            Toast.makeText(MainActivity.this,nums.toString(),Toast.LENGTH_LONG).show();
+                            nums.add(i);
                         }
+                        // 使用Toast显示统计出来的所有质数
+                        Toast.makeText(MainActivity.this,nums.toString(),Toast.LENGTH_LONG).show();
                     }
                 }
             };
