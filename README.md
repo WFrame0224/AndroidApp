@@ -76,3 +76,6 @@ Contents:
 * **Configurationtest** 介绍了响应系统设置的事件，*Configuration*类，给出了利用其读取系统配置信息的演示，同时重写了onConfigurationChanged方法的响应函数监听按键控制的屏幕方向更改的事件
 * **HandlerTest** 介绍了Handler在线程中使用的步骤，实现了使用新线程计算质数的方法
 * **AsyncTaskTest** 介绍了异步任务的执行机制，介绍了异步任务的使用方法以及3个使用步骤，给出了网页下载的简单演示
+> **----------------4、Activity & Fragment的学习--------------**
+### 17. ActivitySet
+* **LancherActivity** 介绍了使用*LacherActivity*实现启动多个*Activity*界面，包括使用*ExpandableListActivity*实现的可展开的列表项的*Activity*界面，以及使用*PreferenceActivity*结合*PreferenceFragment*实现参数设置界面
