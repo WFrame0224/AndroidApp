@@ -19,7 +19,7 @@ public class ResultActivity extends AppCompatActivity {
         // 直接通过Intent取出它所携带的Bundle数据包中的数据
         Person person = (Person) intent.getSerializableExtra("person");
         name.setText("您的用户名为：" + person.getName());
-        passwd.setText("您的密码为" + person.getPasswd());
-        gender.setText("您的性别为" + person.getGender());
+        passwd.setText("您的密码为：" + person.getPasswd());
+        gender.setText("您的性别为：" + person.getGender());
     }
 }
