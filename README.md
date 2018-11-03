@@ -79,3 +79,4 @@ Contents:
 > **----------------4、Activity & Fragment的学习--------------**
 ### 17. ActivitySet
 * **LancherActivity** 介绍了使用*LacherActivity*实现启动多个*Activity*界面，包括使用*ExpandableListActivity*实现的可展开的列表项的*Activity*界面，以及使用*PreferenceActivity*结合*PreferenceFragment*实现参数设置界面
+* **StartCloseActivity** 介绍了Activity的启动、切换、和关闭的简单演示
