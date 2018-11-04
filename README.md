@@ -84,3 +84,5 @@ Contents:
 * **ActivityForResult** 介绍了启动其他*Activity*并返回结果**startActivityForResult(...)**方法，演示了用第二个*Activity*让用户选择信息的例程演示
 * **ActivityLifeCycle** 介绍了Activity的整个生命周期，并用简单的例程结合Log窗口进行演示
 * **LancherMode** 介绍了Activity的启动模式，给出了*singleTask*模式（Task内单例模式）第三种形式，当要启动的目标Activity已经存在，但没有位于栈顶的情况
+### 18. FragmentSet
+* **FragementTest** 介绍了*Fragment*的机制，并借助显示图书详情的例子给出了*Fragment*与所属*Activity*传递数据，并进行实时通信的机制
