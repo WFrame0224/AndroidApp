@@ -83,3 +83,4 @@ Contents:
 * **BundleTest** 介绍了*Bundle*在*Activity*之间交换数据的机制，演示了用第二个Activity处理注册信息
 * **ActivityForResult** 介绍了启动其他*Activity*并返回结果**startActivityForResult(...)**方法，演示了用第二个*Activity*让用户选择信息的例程演示
 * **ActivityLifeCycle** 介绍了Activity的整个生命周期，并用简单的例程结合Log窗口进行演示
+* **LancherMode** 介绍了Activity的启动模式，给出了*singleTask*模式（Task内单例模式）第三种形式，当要启动的目标Activity已经存在，但没有位于栈顶的情况
