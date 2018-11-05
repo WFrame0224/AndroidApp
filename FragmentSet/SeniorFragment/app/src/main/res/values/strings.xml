@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SeniorFragment</string>
+    <string name="title_book_detail">图书详情</string>
+</resources>
