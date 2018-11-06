@@ -88,3 +88,6 @@ Contents:
 * **FragementTest** 介绍了*Fragment*的机制，并借助显示图书详情的例子给出了*Fragment*与所属*Activity*传递数据，并进行实时通信的机制
 * **SeniorFragment** 介绍了开发兼顾屏幕分辨率的应用，通过*res.xml*来引用不同的布局资源，并在主UI线程中，使用标志位来区分
 * **FragmentLifeCycle** 简单介绍了Activity的生命周期，利用日志输出窗口进行观察
+> **------------------5、Intent和IntentFilter的学习----------------**
+### 19. IntentSet
+* **ComponentTest** 简单介绍了如何通过显示*Intent*(指定了*Component*)来启动另一个*Activity*
