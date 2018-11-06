@@ -86,3 +86,5 @@ Contents:
 > **------------------5、Intent和IntentFilter的学习----------------**
 ### 19. IntentSet
 * **ComponentTest** 简单介绍了如何通过显示*Intent*(指定了*Component*)来启动另一个*Activity*
+* **ActionCategoryTest** 简单的介绍了*Action*和*Category*的使用方法，可以通过这两个字符串属性，实现打开对应的*Activity*等操作
+* **ActionCategoryTest2** 给出了利用*Action*调用其他应用软件的示例：查看并获取联系人信息和电话
