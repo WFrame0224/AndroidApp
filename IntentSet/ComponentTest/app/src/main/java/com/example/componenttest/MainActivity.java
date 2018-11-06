@@ -18,11 +18,16 @@ public class MainActivity extends AppCompatActivity {
         bn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                /**
                 // 创建一个ComponentName对象
                 ComponentName comp = new ComponentName(MainActivity.this,SecondActivity.class);
                 Intent intent = new Intent();
                 // 为Intent设置Component属性
                 intent.setComponent(comp);
+                 */
+                // 以上三行代码可简化为如下,这也是我们平常使用的最多的方式
+                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
                 startActivity(intent);
             }
         });
