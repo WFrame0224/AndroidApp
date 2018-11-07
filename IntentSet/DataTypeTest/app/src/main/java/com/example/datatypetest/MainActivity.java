@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void schemeHostPort(View source){
         Intent intent = new Intent();
-        intent.setData(Uri.parse("lee://www.crazyit.org:8888/test"));
+        intent.setData(Uri.parse("lee://www.fkjava.org:8888/test"));
         startActivity(intent);
     }
     public void schemeHostPath(View view){

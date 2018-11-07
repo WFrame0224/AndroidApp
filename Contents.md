@@ -88,3 +88,4 @@ Contents:
 * **ComponentTest** 简单介绍了如何通过显示*Intent*(指定了*Component*)来启动另一个*Activity*
 * **ActionCategoryTest** 简单的介绍了*Action*和*Category*的使用方法，可以通过这两个字符串属性，实现打开对应的*Activity*等操作
 * **ActionCategoryTest2** 给出了利用*Action*调用其他应用软件的示例：查看并获取联系人信息和电话
+* **DataTypeTest** 介绍了*Data*和*Type*的例子演示，演示如何利用这两个属性其他其他应用
