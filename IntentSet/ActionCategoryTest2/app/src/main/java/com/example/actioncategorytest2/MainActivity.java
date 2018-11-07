@@ -41,6 +41,16 @@ public class MainActivity extends AppCompatActivity {
                 requestPermissions(str,0x133);
             }
         });
+        Button bn_home = (Button)findViewById(R.id.bn_home);
+        bn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                startActivity(intent);
+            }
+        });
     }
 
     /**

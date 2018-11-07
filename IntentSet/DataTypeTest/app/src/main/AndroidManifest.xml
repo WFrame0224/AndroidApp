@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.datatypetest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SchemeActivity"
+            android:icon="@drawable/ic_scheme"
+            android:label="指定scheme的Activity">
+            <intent-filter>
+                <action android:name="xx"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <!-- 只要Intent的Data属性的scheme是lee,即可启动该Activity -->
+                <data android:scheme="lee"></data>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SchemeHostPortActivity"
+            android:icon="@drawable/ic_host"
+            android:label="指定scheme、host、post的Activity">
+            <intent-filter>
+                <action android:name="xx"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <!-- 只要Intent的Data属性的scheme是lee，且host是www.fkjava.org，port是8888即可启动该Activity -->
+                <data
+                    android:host="www.fkjava.org"
+                    android:port="8888"
+                    android:scheme="lee"></data>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SchemeHostPathActivity"
+            android:icon="@drawable/ic_path"
+            android:label="指定schme、host、path的Activity">
+            <intent-filter>
+                <action android:name="xx"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <!-- 只要Intent的Data属性是Scheme是lee,且host是www.fkjava.org，path是/mypath，即可启动该Activity -->
+                <data
+                    android:host="www.fkjava.org"
+                    android:path="/mypath"
+                    android:scheme="lee"></data>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SchemeHostPortPathActivity"
+            android:icon="@drawable/ic_sp"
+            android:label="指定scheme、host、port、path的Activity">
+            <intent-filter>
+                <action android:name="xx"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <!-- 需要Intent的Data属性的Scheme是lee，且host是www.fkjava.org，port是8888，且path是/mypath，才可以启动该Activity -->
+                <data
+                    android:host="www.fkjava.org"
+                    android:path="/mypath"
+                    android:port="8888"
+                    android:scheme="lee"></data>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SchemeHostPortPathTypeActivity"
+            android:icon="@drawable/ic_type"
+            android:label="指定scheme、host、port、path、type的Activity">
+            <intent-filter>
+                <action android:name="xx"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <!-- 需要Intent的Data属性是scheme是lee，且host是www.fkjava.org，port是8888，
+                且path是/mypath且type是abc/xyz，才可以启动该Activity -->
+                <data
+                    android:host="www.fkjava.org"
+                    android:mimeType="abc/xyz"
+                    android:path="/mypath"
+                    android:port="8888"
+                    android:scheme="lee"></data>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

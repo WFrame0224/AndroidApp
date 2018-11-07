@@ -42,5 +42,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="查看联系人" />
+    <Button
+        android:id="@+id/bn_home"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="返回系统桌面"/>
 
 </TableLayout>
