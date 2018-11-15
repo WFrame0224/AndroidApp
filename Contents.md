@@ -90,3 +90,7 @@ Contents:
 * **ActionCategoryTest2** 给出了利用*Action*调用其他应用软件的示例：查看并获取联系人信息和电话
 * **DataTypeTest** 介绍了*Data*和*Type*的例子演示，演示如何利用这两个属性其他其他应用
 * **ActionData** 介绍了*Action*和*Data*的属性一起使用的场景
+> **-------------------6、Android应用资源的学习-----------------------**
+### 20. ResourceSet
+* **StringColorDimen** 介绍了Android的应用资源*String*和*Color*和*Dimension*的使用方法
+* **ArrayResTest** 介绍了Android的应用资源*Array*的使用方法
