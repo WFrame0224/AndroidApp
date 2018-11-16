@@ -94,4 +94,4 @@ Contents:
 ### 20. ResourceSet
 * **StringColorDimen** 介绍了Android的应用资源*String*和*Color*和*Dimension*的使用方法
 * **ArrayResTest** 介绍了Android的应用资源*Array*的使用方法
-* **DrawableTest** 介绍了如何使用*Drawable*资源，包括*StateListDrawable*、*LayerDrawable*、*shapeDrawable*、*ClipDrawable*的简单的使用方法
+* **DrawableTest** 介绍了如何使用*Drawable*资源，包括*StateListDrawable*、*LayerDrawable*、*shapeDrawable*、*ClipDrawable*、*AnimationDrawable*的简单的使用方法

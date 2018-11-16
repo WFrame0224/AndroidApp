@@ -41,6 +41,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/my_shape_3" />
+    <Button
+        android:id="@+id/bn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开动画页"
+        android:onClick="openSecond"/>
 
     <ImageView
         android:id="@+id/image"
@@ -48,4 +54,6 @@
         android:layout_height="wrap_content"
         android:scaleType="fitStart"
         android:src="@drawable/my_clip" />
+
+
 </LinearLayout>

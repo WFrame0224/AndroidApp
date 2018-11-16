@@ -1,10 +1,12 @@
 package com.example.drawabletest;
 
+import android.content.Intent;
 import android.graphics.drawable.ClipDrawable;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import java.util.Timer;
@@ -44,5 +46,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         },0,50);
+    }
+
+    public void openSecond(View view) {
+        Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+        startActivity(intent);
     }
 }
