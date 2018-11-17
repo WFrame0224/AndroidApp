@@ -7,5 +7,14 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="style1" parent="@style/AppTheme">
+        <item name="android:background">#aaa</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">#f32</item>
+    </style>
+    <style name="style2" parent="@style/style1">
+        <item name="android:background">#ee6</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">#fa2</item>
+    </style>
 </resources>

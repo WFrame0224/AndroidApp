@@ -2,5 +2,5 @@
 <books>
     <book price="109.0" 出版日期="2008">疯狂Java讲义</book>
     <book price="108.0" 出版日期="2009">轻量级Java EE企业应用实战</book>
-    <book price="79.0" 出版日期="2008">疯狂Ajax</book>
+    <book price="79.0" 出版日期="2009">疯狂Ajax</book>
 </books>

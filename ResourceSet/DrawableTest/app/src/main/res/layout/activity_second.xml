@@ -26,9 +26,11 @@
     <EditText
         android:id="@+id/show"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_height="105dp"
+        android:height="40dp"
         android:hint="解析到的xml文件信息"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:minLines="3"
+        android:singleLine="false" />
 
 </LinearLayout>

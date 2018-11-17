@@ -9,12 +9,14 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@drawable/my_image" />
+        android:textColor="@drawable/my_image"
+        style="@style/style1"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@drawable/my_image" />
+        android:textColor="@drawable/my_image"
+        style="@style/style2"/>
 
     <SeekBar
         android:layout_width="match_parent"
@@ -30,12 +32,14 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/my_shape_1" />
+        android:background="@drawable/my_shape_1"
+        style="@style/style1"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/my_shape_2" />
+        android:background="@drawable/my_shape_2"
+        style="@style/style2"/>
 
     <EditText
         android:layout_width="match_parent"

@@ -44,11 +44,11 @@ public class SecondActivity extends AppCompatActivity {
                     // 还没有到XML文档的结尾处
                     while (xrp.getEventType() != XmlResourceParser.END_DOCUMENT){
                         // 如果遇到了开始标签
-                        if (xrp.getEventType() == XmlResourceParser.START_DOCUMENT){
+                        if (xrp.getEventType() == XmlResourceParser.START_TAG){
                             // 获取该标签的标签名
                             String tagName = xrp.getName();
                             // 如果遇到book标签
-                            if (tagName.equals("books")){
+                            if (tagName.equals("book")){
                                 // 根据属性名开获取属性值
                                 String bookName = xrp.getAttributeValue(null,"price");
                                 sb.append("价格为：");
