@@ -17,4 +17,18 @@
         android:layout_height="wrap_content"
         android:text="开始动画"/>
 
+    <Button
+        android:id="@+id/bn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解析Xml" />
+
+    <EditText
+        android:id="@+id/show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="解析到的xml文件信息"
+        android:inputType="textPersonName" />
+
 </LinearLayout>
