@@ -3,6 +3,7 @@
     xmlns:frame="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -12,5 +13,19 @@
         android:layout_height="wrap_content"
         android:src="@drawable/javaee"
         frame:duration="60000"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="播放 /res/raw 下的声音"
+        android:onClick="displayRaw"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="播放 /assets 下的声音"
+        android:onClick="displayAssets"/>
 
 </LinearLayout>

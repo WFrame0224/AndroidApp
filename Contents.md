@@ -95,4 +95,4 @@ Contents:
 * **StringColorDimen** 介绍了Android的应用资源*String*和*Color*和*Dimension*的使用方法
 * **ArrayResTest** 介绍了Android的应用资源*Array*的使用方法
 * **DrawableTest** 介绍了如何使用*Drawable*资源，包括*StateListDrawable*、*LayerDrawable*、*shapeDrawable*、*ClipDrawable*、*AnimationDrawable*的简单的使用方法
-* **AttributeTest** 介绍了如何使用属性资源的使用，可以用户帮助用户开发自定义的View组件
+* **AttributeTest** 介绍了如何使用属性资源的使用，可以用户帮助用户开发自定义的View组件，同时增加了使用原始资源的应用示例
