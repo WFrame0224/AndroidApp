@@ -100,3 +100,4 @@ Contents:
 * **SharedPerferencesTest** 介绍了*SharedPerferences*的简单的使用方法，存储一些数据量较少的数据，采用key-value的形式
 * **FlilexxInstream** 介绍了Android使用IO流体系存储读取数据的简单演示，主要使用了*openFileOutput*和*openFileInput*进行
 * **SdcardTest** 介绍了Android使用Io流体系读取SD卡中的内容，主要需要使用*Environment类*以及获取相应的读取权限，同时给出了Sd卡下的文件浏览器示例
+* **DBTest** 介绍了Android使用**SQLite**数据库的基本使用方法，包括不常用的静态打开方法和使用*SQLiteOpenHelper*方法进行数据库读写等操作
