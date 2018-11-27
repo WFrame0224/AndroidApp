@@ -28,8 +28,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         // 创建或打开数据库（此处需要绝对路径）
-        db = SQLiteDatabase.openOrCreateDatabase(this.getFilesDir().toString() + "/my.db3",null);
+        db = SQLiteDatabase.openOrCreateDatabase(this.getFilesDir().toString()
+                + "/my.db3",null);
         listView = (ListView)findViewById(R.id.show);
         bn = (Button)findViewById(R.id.ok);
         bn.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     private void inflateList(Cursor cursor) {
         // 填充SimpleCursorAdapter
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     public void onDestroy(){
         super.onDestroy();
         // 退出程序时关闭SQLiteDatabase
-        if (db != null && db.isOpen()){
+        if (db != null && db.isOpen()) {
             db.close();
         }
     }
