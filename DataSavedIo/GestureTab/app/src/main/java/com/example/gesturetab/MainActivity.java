@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity
     // 定义一个动画数组，用于为ViewFlipper指定切换动画效果
     Animation[] animations = new Animation[4];
     // 指定手势动作两点之间的最小距离
-    private float FLIP_DISTANCE = 0f;
+    final int FLIP_DISTANCE = 50;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity
         flipper.addView(addImageView(R.drawable.swift));
         // 初始化Animation数组
         animations[0] = AnimationUtils.loadAnimation(this,R.anim.left_in);
-        animations[0] = AnimationUtils.loadAnimation(this,R.anim.left_out);
-        animations[0] = AnimationUtils.loadAnimation(this,R.anim.right_in);
-        animations[0] = AnimationUtils.loadAnimation(this,R.anim.right_out);
+        animations[1] = AnimationUtils.loadAnimation(this,R.anim.left_out);
+        animations[2] = AnimationUtils.loadAnimation(this,R.anim.right_in);
+        animations[3] = AnimationUtils.loadAnimation(this,R.anim.right_out);
     }
 
     // 定义添加ImageView的工具方法
@@ -85,23 +85,23 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float velocityX, float velocityY) {
+    public boolean onFling(MotionEvent event1, MotionEvent event2, float velocityX, float velocityY) {
 
         // 如果第一个触点事件的X坐标大于第二个触点事件的X坐标超过FLIP_DISTANCE
         // 也就是手势从右向左滑
-        if (motionEvent.getX() - motionEvent1.getX() > FLIP_DISTANCE){
+        if (event1.getX() - event2.getX() > FLIP_DISTANCE){
             // 为flipper设置切换的动画效果
             flipper.setInAnimation(animations[0]);
-            flipper.setInAnimation(animations[1]);
+            flipper.setOutAnimation(animations[1]);
             flipper.showPrevious();
             return true;
         }
         // 如果第二个触点事件的X坐标大于第一个触点事件的X坐标超过FLIP_DISTANCE
         // 也就是手势从右向左滑
-        else if (motionEvent1.getX() - motionEvent.getX() > FLIP_DISTANCE){
+        else if (event2.getX() - event1.getX() > FLIP_DISTANCE){
             // 为Flipper设置切换的动画效果
             flipper.setInAnimation(animations[2]);
-            flipper.setInAnimation(animations[3]);
+            flipper.setOutAnimation(animations[3]);
             flipper.showNext();
             return true;
         }
