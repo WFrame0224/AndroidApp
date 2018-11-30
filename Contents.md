@@ -102,3 +102,4 @@ Contents:
 * **SdcardTest** 介绍了Android使用Io流体系读取SD卡中的内容，主要需要使用*Environment类*以及获取相应的读取权限，同时给出了Sd卡下的文件浏览器示例
 * **DBTest** 介绍了Android使用**SQLite**数据库的基本使用方法，包括不常用的静态打开方法和使用*SQLiteOpenHelper*方法进行数据库读写等操作
 * **Dict** 介绍了Android使用**SQLiteHelper**类实现数据库的读写，实现生词本的添加与查询
+* **GestureTest** 介绍了使用**GestureDetector**类的基本使用方法，并手势的基本操作方式与操作函数，给出了利用手势去缩放图片

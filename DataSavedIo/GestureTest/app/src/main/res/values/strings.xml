@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">手势测试</string>
+    <string name="hello">请在屏幕上随意“挥舞”各种手势</string>
+</resources>
