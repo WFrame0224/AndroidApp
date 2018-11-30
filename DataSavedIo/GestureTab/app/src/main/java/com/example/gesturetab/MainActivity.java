@@ -10,8 +10,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
-public class MainActivity extends AppCompatActivity
-        implements GestureDetector.OnGestureListener {
+public class MainActivity extends AppCompatActivity{
+//        implements GestureDetector.OnGestureListener {
 
     // ViewFilpper实例
     ViewFlipper flipper;
@@ -28,7 +28,31 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         // 创建手势检测器
-        detector = new GestureDetector(this,this);
+        detector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
+            @Override
+            public boolean onFling(MotionEvent event1, MotionEvent event2, float velocityX, float velocityY) {
+
+                // 如果第一个触点事件的X坐标大于第二个触点事件的X坐标超过FLIP_DISTANCE
+                // 也就是手势从右向左滑
+                if (event1.getX() - event2.getX() > FLIP_DISTANCE){
+                    // 为flipper设置切换的动画效果
+                    flipper.setInAnimation(animations[0]);
+                    flipper.setOutAnimation(animations[1]);
+                    flipper.showPrevious();
+                    return true;
+                }
+                // 如果第二个触点事件的X坐标大于第一个触点事件的X坐标超过FLIP_DISTANCE
+                // 也就是手势从右向左滑
+                else if (event2.getX() - event1.getX() > FLIP_DISTANCE){
+                    // 为Flipper设置切换的动画效果
+                    flipper.setInAnimation(animations[2]);
+                    flipper.setOutAnimation(animations[3]);
+                    flipper.showNext();
+                    return true;
+                }
+                return false;
+            }
+        });
         // 获得ViewFlipper实例
         flipper = (ViewFlipper)this.findViewById(R.id.flipper);
         // 为ViewFlipper添加5个ImageView组件
@@ -58,7 +82,7 @@ public class MainActivity extends AppCompatActivity
         // 将该Activity上的触碰事件交给GestureDetector处理
         return detector.onTouchEvent(event);
     }
-
+/**
     @Override
     public boolean onDown(MotionEvent motionEvent) {
         return false;
@@ -107,4 +131,5 @@ public class MainActivity extends AppCompatActivity
         }
         return false;
     }
+ **/
 }
