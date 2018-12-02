@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FirstResolver</string>
+    <string name="query">查询</string>
+    <string name="insert">插入</string>
+    <string name="update">更改</string>
+    <string name="delete">删除</string>
+</resources>

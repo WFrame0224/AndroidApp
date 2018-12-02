@@ -104,3 +104,6 @@ Contents:
 * **Dict** 介绍了Android使用**SQLiteHelper**类实现数据库的读写，实现生词本的添加与查询
 * **GestureTest** 介绍了使用**GestureDetector**类的基本使用方法，并手势的基本操作方式与操作函数，给出了利用手势去缩放图片
 * **GestureFlip** 介绍了使用**GestureDetector**实现翻页的效果
+> **---------------------8、ContentProvider的学习------------------**
+* **FirstProvider/Resolver** 介绍了使用**ContentProvider**进行不同应用之间的数据共享的简单演示，此应用只是单存的机制演示，并未涉及到具体的数据存储与读取
+* **DictProvider/Resolver** 介绍了使用*contentProvider*实现的生词本的不同应用之间的数据共享，第一个应用作为数据的提供端，另一个应用作为数据的使用端*contentResolver*
