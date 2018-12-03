@@ -36,7 +36,7 @@ public class DictProvider extends ContentProvider {
             case WORDS:
                 return "vnd.android.cursor.dir/com.frame.dict";
             case WORD:
-                return "vnd.android.cursor.item/org.crazy.dict";
+                return "vnd.android.cursor.item/com.frame.dict";
             default:
                 throw new IllegalArgumentException("未知Uri" + uri);
         }

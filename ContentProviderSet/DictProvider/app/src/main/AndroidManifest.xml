@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dictprovider">
-
+    <!-- 指定该应用暴露一个权限 -->
+    <permission android:name="com.frame.permission.USE_DICT"></permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,7 +25,8 @@
         <provider
             android:name=".DictProvider"
             android:authorities="com.frame.providers.dictprovider"
-            android:exported="true"></provider>
+            android:exported="true"
+            android:permission="com.frame.permission.USE_DICT"></provider>
     </application>
 
 </manifest>

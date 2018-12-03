@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     ContentResolver contentResolver;
-    Uri uri = Uri.parse("content://com.example.providers.firstprovider/");
+    Uri uri = Uri.parse("content://org.crazyit.providers.firstprovider/");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
