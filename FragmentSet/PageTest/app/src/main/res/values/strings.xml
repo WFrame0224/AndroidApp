@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PageTest</string>
+    <string name="title_device">摸高设备</string>
+    <string name="title_score">成绩信息</string>
+    <string name="title_projects">摸高项目</string>
+    <string name="title_account">个人中心</string>
+</resources>
