@@ -4,4 +4,20 @@
     <string name="title_score">成绩信息</string>
     <string name="title_projects">摸高项目</string>
     <string name="title_account">个人中心</string>
+
+    <!-- 以下部分仅为模拟搜索到的蓝牙设备的名称 -->
+    <string name="devices_n1">HighTouch</string>
+    <string name="devices_n2">HC-05-1</string>
+    <string name="devices_n3">ANG-PC</string>
+    <string name="devices_n4">Mi-Band</string>
+    <string name="devices_n5">Huawei-Band</string>
+    <!-- 以下部分仅为模拟搜索到的蓝牙设备的地址 -->
+    <string name="devices_addr_1">20:15:04:27:68:61</string>
+    <string name="devices_addr_2">00:15:04:27:33:61</string>
+    <string name="devices_addr_3">1f:15:04:27:3f:6f</string>
+    <string name="devices_addr_4">25:17:01:27:68:6a</string>
+    <string name="devices_addr_5">33:15:04:27:70:00</string>
+    <!-- 以下部分仅为模拟搜索到的蓝牙设备的状态 -->
+    <string name="devices_status_0">Binde:Bonded</string>
+    <string name="devices_status_1">Binde:None</string>
 </resources>

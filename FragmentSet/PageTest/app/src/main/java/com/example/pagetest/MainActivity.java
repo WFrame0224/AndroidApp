@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // 隐藏活动条
+        getSupportActionBar().hide();
 
         // 获取到两个控件
         mainActivityViewPaper = (ViewPager)findViewById(R.id.main_viewpaper);

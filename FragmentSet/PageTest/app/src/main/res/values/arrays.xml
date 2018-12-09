@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 以下部分仅为模拟搜索到的蓝牙设备的名称 -->
+    <string-array name="devices_name">
+        <item>@string/devices_n1</item>
+        <item>@string/devices_n2</item>
+        <item>@string/devices_n3</item>
+        <item>@string/devices_n4</item>
+        <item>@string/devices_n5</item>
+    </string-array>
+    <!-- 以下部分仅为模拟搜索到的蓝牙设备的地址 -->
+    <string-array name="devices_addr">
+        <item>@string/devices_addr_1</item>
+        <item>@string/devices_addr_2</item>
+        <item>@string/devices_addr_3</item>
+        <item>@string/devices_addr_4</item>
+        <item>@string/devices_addr_5</item>
+    </string-array>
+    <!-- 以下部分仅为模拟搜索到的蓝牙设备的状态 -->
+    <string-array name="devices_status">
+        <item>@string/devices_status_0</item>
+        <item>@string/devices_status_1</item>
+        <item>@string/devices_status_0</item>
+        <item>@string/devices_status_1</item>
+        <item>@string/devices_status_1</item>
+    </string-array>
+</resources>
