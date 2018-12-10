@@ -23,7 +23,7 @@
     <ListView
         android:id="@+id/devices_detail"
         android:layout_width="match_parent"
-        android:layout_height="325dp"
+        android:layout_height="336dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
@@ -31,12 +31,11 @@
         android:dividerHeight="2px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" >
-    </ListView>
+        app:layout_constraintTop_toBottomOf="@+id/textView"></ListView>
 
     <Button
         android:id="@+id/devices_search"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
@@ -49,18 +48,20 @@
         app:layout_constraintStart_toStartOf="@+id/devices_detail"
         app:layout_constraintTop_toBottomOf="@id/devices_detail" />
 
-    <Button
-        android:id="@+id/devices_connect"
+    <TextView
+        android:id="@+id/connect_show"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="4dp"
-        android:text="连接  智能摸高仪"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
+        android:layout_marginEnd="8dp"
+        android:hint="已配对设备"
+        android:paddingLeft="10dp"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/devices_detail"
-        app:layout_constraintTop_toBottomOf="@id/devices_search" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/devices_search" />
+
+
 </android.support.constraint.ConstraintLayout>
