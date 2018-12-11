@@ -107,3 +107,4 @@ Contents:
 > **---------------------8、ContentProvider的学习------------------**
 * **FirstProvider/Resolver** 介绍了使用**ContentProvider**进行不同应用之间的数据共享的简单演示，此应用只是单存的机制演示，并未涉及到具体的数据存储与读取
 * **DictProvider/Resolver** 介绍了使用*contentProvider*实现的生词本的不同应用之间的数据共享，第一个应用作为数据的提供端，另一个应用作为数据的使用端*contentResolver*
+* **ContentObserverTest** 介绍了使用*ContentObserver* 的工作机制，并采用该方式去实现了去监听系统短信的内容发送
