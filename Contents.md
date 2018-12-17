@@ -48,9 +48,8 @@ Contents:
 ### 13. DialogBoxSet
 * **AlertDialogUi** 实现了利用*AlertDialog*实现以下几种对话框：
 
-    简单文本对话框 | 简单列表对话框 | 单选/多选列表对话框 | 自定义列表项 | 自定义View对话框
-    ------------- | ------------- | ----------------- | ----------- | --------------
-
+    | 简单文本对话框 | 简单列表对话框 | 单选/多选列表对话框 | 自定义列表项 | 自定义View对话框 |
+    | :-------------| ------------- | ----------------- | ----------- | --------------: |
 * **PopupWindow** 实现了使用*PopupWindow*创建的弹出式对话框，使用*DatePickerDialog*和*TimerPickerDialog*实现日期和时间的弹出式选择对话框
 * **ProgressDialogUi** 实现了利用*progressDialog*创建进度对话框，显示任务执行的进度
 ### 14. MenuSet
@@ -110,3 +109,4 @@ Contents:
 * **ContentObserverTest** 介绍了使用*ContentObserver* 的工作机制，并采用该方式去实现了去监听系统短信的内容发送
 > **---------------------9、ServiceSet----------------------**
 * **BindService** 简单介绍了**Service**的生命周期，演示了 通过Context的bindService()方法 来启动Service，使用该方法时，访问者和Service绑定在一起，访问者一旦退出，Service也就终止了
+* **IntentService** 简单介绍了**IntentService**的特点，以及使用场合，演示了**IntentService**同**Service**的不同方式，尤其是有耗时任务的处理机制
