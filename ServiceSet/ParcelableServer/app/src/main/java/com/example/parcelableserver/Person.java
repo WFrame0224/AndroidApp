@@ -5,29 +5,29 @@ import android.os.Parcelable;
 
 public class Person implements Parcelable {
 
-    public int id = 0;
-    public String name = "";
-    public String pass = "";
+    private String name;
+    public int age;
+    public int number;
 
     public Person(Parcel in) {
-        this.id = in.readInt();
         this.name = in.readString();
-        this.pass = in.readString();
+        this.age = in.readInt();
+        this.number = in.readInt();
     }
 
-    public Person(int id, String name, String pass) {
-        this.id = id;
+    public Person(String name, int age, int number) {
         this.name = name;
-        this.pass = pass;
+        this.age = age;
+        this.number = number;
     }
 
     // 实现Parcelable接口必须实现的方法
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         // 把该对象所包含的数据写到Parcel
-        dest.writeInt(this.id);
-        dest.writeString(this.name);
-        dest.writeString(this.pass);
+        dest.writeString(name);
+        dest.writeInt(age);
+        dest.writeInt(number);
     }
 
     // 添加一个静态成员，名为CREATOR，该对象实现了Parcelable.Creator接口
@@ -44,34 +44,18 @@ public class Person implements Parcelable {
         }
     };
 
-    @Override
-    public int hashCode() {
-        int prime = 31;
-        int result = 1;
-        result = prime * result + this.name.hashCode();
-        result = prime * result + this.pass.hashCode();
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (this instanceof Object) {
-            return false;
-        }
-        Person other = (Person) obj;
-        return (this.name == other.name && this.pass == other.pass);
-    }
-
     // 实现Parcelable接口必须实现的方法
     @Override
     public int describeContents() {
         return 0;
+    }
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name +
+                ", age=" + age +
+                ", number=" + number +
+                '}';
     }
 
 }

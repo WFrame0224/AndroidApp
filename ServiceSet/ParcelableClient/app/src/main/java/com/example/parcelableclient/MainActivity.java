@@ -8,29 +8,32 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.example.parcelableserver.IPet;
+import com.example.parcelableserver.IPerson;
 import com.example.parcelableserver.Person;
-import com.example.parcelableserver.Pet;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    private IPet perService;
+    private IPerson iPerson;
     private boolean accessFlag = false;
+
     public ServiceConnection cnn = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder service) {
+            Log.d("cylog", "onServiceConnected success");
             // 获取远程Service的onBind方法返回对象的代理
-            perService = IPet.Stub.asInterface(service);
-            if (perService != null){
+            iPerson = IPerson.Stub.asInterface(service);
+            if (iPerson != null){
                 System.out.println("-----------66666--------");
                 accessFlag = true;// 当连接成功时修改accessFlag为true
             }else {
@@ -40,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onServiceDisconnected(ComponentName componentName) {
-            perService = null;
+            Log.d("cylog", "onServicedisConnected ");
+            iPerson = null;
         }
     };
 
@@ -48,54 +52,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         final EditText personView = (EditText) findViewById(R.id.person);
-        final ListView showView = (ListView) findViewById(R.id.show);
-        Button get = (Button) findViewById(R.id.get);
+        Button addP = (Button) findViewById(R.id.get);
         Button bind = (Button)findViewById(R.id.bind);
-        // 创建所需绑定的Service的Intent
-        final Intent intent = new Intent();
-        intent.setAction("com.example.aidl.action.PARCELABLE_SERVICE");
-        intent.setPackage("com.example.parcelableserver");
 
         bind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("-----------------");
-                System.out.println(intent.getAction());
-                System.out.println(intent.getPackage());
-                System.out.println("-----------------");
+                // 创建所需绑定的Service的Intent
+                Intent intent = new Intent();
+                intent.setAction("com.example.aidl.action.PARCELABLE_SERVICE");
+                intent.setPackage("com.example.parcelableserver");
+
                 // 绑定远程Service
                 bindService(intent, cnn, Service.BIND_AUTO_CREATE);
             }
         });
-        get.setOnClickListener(new View.OnClickListener() {
+        addP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String personName = personView.getText().toString();
-                System.out.println(personName);
-                // 调用远程的Service的方法
-                List<Pet> pets = new ArrayList<>();
+                Random random = new Random();
+                Person person = new Person("非非",random.nextInt(),random.nextInt()*100);
                 try {
-                    pets = perService.getPets(new Person(1, personName, personName));
-                    if (pets != null){
-                        System.out.println("-----------获取了数据------------");
-                        // 将程序返回的List包装成ArrayAdapter
-                        ArrayAdapter<Pet> adapter = new ArrayAdapter<Pet>(MainActivity.this,
-                                android.R.layout.simple_list_item_1, pets);
-                        try {
-                            showView.setAdapter(adapter);
-                        }catch (NullPointerException e)
-                        {
-                            e.printStackTrace();
-                        }
-                    }else {
-                        System.out.println("-----------还是没能获取数据------------");
-                    }
-
-                } catch (Exception e) {
+                    iPerson.addPerson(person);
+                    List<Person> personList = iPerson.getPersonList();
+                    personView.setText(personList.toString());
+                } catch (RemoteException e) {
                     e.printStackTrace();
                 }
-
             }
         });
     }
