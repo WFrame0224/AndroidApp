@@ -183,3 +183,4 @@
 - **BindService** 简单介绍了**Service**的生命周期，演示了 通过Context的bindService()方法 来启动Service，使用该方法时，访问者和Service绑定在一起，访问者一旦退出，Service也就终止了
 - **IntentService** 简单介绍了**IntentService**的特点，以及使用场合，演示了**IntentService**同**Service**的不同方式，尤其是有耗时任务的处理机制
 - **ADILService/ADILServiceClient** 简单介绍了_ADILService_在跨进程数据调用时的工作机制，同普通本地Service的工作机制的区别，实现简单的数据传递的演示
+- **ParcelableServer/ParcelableClient** 简单演示了利用序列化与反序列化接口_Parcelable_实现自定义的数据类型的跨进程数据调用
