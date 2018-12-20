@@ -85,5 +85,6 @@
 sync_changes.log
 
 sync_hook.script
+**/BroadcastReceiverSet/MusicBox/app/src/main/assets/*
 
 **/.Archive

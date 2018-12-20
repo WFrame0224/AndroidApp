@@ -189,3 +189,4 @@
 - **Broadcast** 简单介绍了BroadCast的工作机制，演示了普通广播的实现方式，_注意_：Android 8 需要在创建intent发送广播时，不仅需要指定其**action**还需要指定**package**
 - **SortedBroadCast** 简单介绍了有序广播的工作机制，以及不同优先级监听者的数据监听次序，同时演示了在广播过程中携带数据的机制。
 - **MusicBox** 介绍了_activity_和_service_借助**Broadcast**进行数据通信的工作机制，并完成了对应的音乐播放器的例子
+- **SysBroadcast** 介绍了监听系统广播的机制，给出了监听电池电量的例子
