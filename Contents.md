@@ -183,4 +183,8 @@
 - **BindService** 简单介绍了**Service**的生命周期，演示了 通过Context的bindService()方法 来启动Service，使用该方法时，访问者和Service绑定在一起，访问者一旦退出，Service也就终止了
 - **IntentService** 简单介绍了**IntentService**的特点，以及使用场合，演示了**IntentService**同**Service**的不同方式，尤其是有耗时任务的处理机制
 - **ADILService/ADILServiceClient** 简单介绍了_ADILService_在跨进程数据调用时的工作机制，同普通本地Service的工作机制的区别，实现简单的数据传递的演示
-- **ParcelableServer/ParcelableClient** 简单演示了利用序列化与反序列化接口_Parcelable_实现自定义的数据类型的跨进程数据调用
+- **ParcelableServer/ParcelableClient** 简单演示了利用序列化与反序列化接口_Parcelable_实现自定义的数据类型的跨进程数据调用。具体的工作机制详见：[Android Developers-ADIL](https://developer.android.com/guide/components/aidl)
+
+### 24. BoradcastReceiverSet
+- **Broadcast** 简单介绍了BroadCast的工作机制，演示了普通广播的实现方式，_注意_：Android 8 需要在创建intent发送广播时，不仅需要指定其**action**还需要指定**package**
+- **SortedBroadCast** 简单介绍了有序广播的工作机制，以及不同优先级监听者的数据监听次序，同时演示了在广播过程中携带数据的机制。
