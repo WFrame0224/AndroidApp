@@ -202,3 +202,4 @@
 - **URLTest** 简单介绍了使用URL访问网络资源的方法，演示了访问网络的图片资源的例子
 - **GetPostURL** 介绍了使用URLConnection提交请求的工作方式，给出了Android连接自己部署的服务器的示例
 - **HttpURLConnection** 介绍了使用HTTP访问网络的工作机制，主要是_HTTPURLConnection_类的使用方法，给出了多线程下载的相关示例程序
+- **HttpClientTest** 介绍了采用**OkHttp** 实现的利用_HttpClient_访问被访问的保护资源
