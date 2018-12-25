@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run(){
                         response = GetPostUtil.sendGet(
-                                "http://10.168.67.19:8888/abc/a.jsp",null);
+                                "http://10.168.67.19:8080/abc/a.jsp",null);
                         // 发送消息通知UI线程更新UI组件
                         handler.sendEmptyMessage(0x123);
                     }
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run(){
                         response = GetPostUtil.sendPost(
-                                "http://10.168.67.19:8888/abc/a.jsp",
+                                "http://10.168.67.19:8080/abc/login.jsp",
                                 "name=crazyit.org&pass=leegang");
                     }
                 }.start();

@@ -200,3 +200,4 @@
 - **SimpleServer / SimpleClient** 简单介绍了Android使用**Socket**进行网络通信的工作机制，并分别给与了PC端的_Server_代码和Android的_Client_代码
 - **MultiThreadServer / MultiThreadClient** 介绍了使用多线程的方式进行网络通信，齐能苟保证客户端和服务器端的长时间的网络通信，且不会阻塞网络，给出了简单的_C/S_聊天室应用
 - **URLTest** 简单介绍了使用URL访问网络资源的方法，演示了访问网络的图片资源的例子
+- **GetPostURL** 介绍了使用URLConnection提交请求的工作方式，给出了Android连接自己部署的服务器的示例
