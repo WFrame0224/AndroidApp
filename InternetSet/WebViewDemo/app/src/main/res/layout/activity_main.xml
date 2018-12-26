@@ -8,8 +8,15 @@
     tools:context=".MainActivity">
 
 
+    <Button
+        android:id="@+id/bn_js"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开JavaScript调用Android的方法页面"/>
+
     <EditText
         android:id="@+id/url"
+        android:hint="请输入您想浏览的网址，按键盘回车键即可浏览"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:imeOptions="actionGo"
