@@ -204,6 +204,7 @@
 - **GetPostURL** 介绍了使用URLConnection提交请求的工作方式，给出了Android连接自己部署的服务器的示例
 - **HttpURLConnection** 介绍了使用HTTP访问网络的工作机制，主要是_HTTPURLConnection_类的使用方法，给出了多线程下载的相关示例程序
 - **HttpClientTest** 介绍了采用**OkHttp** 实现的利用_HttpClient_访问被访问的保护资源（即需要登录名与密码的资源）
-- **WebViewDemo** 介绍了采用WebView实现浏览网页、加载HTML代码的的示例（采用_loadDataWithBaseURL(...)_），给出了Android-8产生系统浏览器跳出的解决办法增加了JavaScript调用Android的方法
+- **WebViewDemo** 介绍了采用WebView实现浏览网页、加载HTML代码的的示例（采用_loadDataWithBaseURL(...)_），给出了Android-8产生系统浏览器跳出的解决办法；增加了JavaScript调用Android的方法
+- **EchartsDemo1** 介绍了采用WebView实现炫彩图表的本地展示，给出了折线图、柱状图、饼图的演示实例，需要用到的依赖_echart.min.js_，_gson-2.2.1_，以及自定义的图表页面
 
 * * *

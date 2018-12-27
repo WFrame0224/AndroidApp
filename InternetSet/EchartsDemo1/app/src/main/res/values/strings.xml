@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EchartsDemo1</string>
+    <string name="echart_line">折线图</string>
+    <string name="echart_bar">柱状图</string>
+    <string name="echart_pie">饼状图</string>
+    <string name="msg">此处展示的是Echart常用的三种图表</string>
+</resources>
