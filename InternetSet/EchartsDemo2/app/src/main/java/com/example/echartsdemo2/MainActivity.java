@@ -26,18 +26,16 @@ public class MainActivity extends AppCompatActivity {
         // 获取指定数据格式的数据,此处可以和外部交互
         List<AccessData> datas = getWeekData();
 
+        // 进行WebView设置
         WebSettings webSettings = webView.getSettings();
 
         webSettings.setJavaScriptEnabled(true);
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         webSettings.setSupportZoom(true);
         webSettings.setDisplayZoomControls(true);
-
+        // 给JavaScript传递生成的myLineChart的Option
         webView.addJavascriptInterface(new myLineChart(this,datas), "myLine");
-
         webView.loadUrl("file:///android_asset/myechart.html");
         webView.setWebViewClient(new WebViewClient());
     }
-
-
 }

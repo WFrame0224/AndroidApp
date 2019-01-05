@@ -16,13 +16,17 @@ import com.github.abel533.echarts.style.LineStyle;
 
 import java.util.List;
 
-import static com.example.echartsdemo2.AccessData.getWeekData;
-
 public class myLineChart {
 
     Context mContext;
+    // 用户数据的数据结构，可后面自己定义
     List<AccessData> lineDatas;
 
+    /**
+     * 构造函数
+     * @param context
+     * @param datas:利用构造函数传入用户的数据
+     */
     public myLineChart(Context context, List<AccessData> datas) {
         this.mContext = context;
         // 获取数据
@@ -63,6 +67,7 @@ public class myLineChart {
         option.grid().borderWidth(0);
 
         // 创建Line数据
+        // 此处开始使用用户的数据
         Line line = new Line("访问量").smooth(true);
         // 根据获取的数据赋值
         for (AccessData lineData : lineDatas) {
